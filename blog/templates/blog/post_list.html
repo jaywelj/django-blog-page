@@ -1,6 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+	{% if user.is_authenticated %}
+	    <div class="add-btn">
+	            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus save"></span></a>
+	    </div>
+	    {% endif %}
+
 	{% for post in posts %}
 		<div class="post">
 			<div class="date">
