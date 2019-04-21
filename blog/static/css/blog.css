@@ -34,11 +34,15 @@ h1, h2, h3, h4 {
 .post-form textarea, .post-form input {
     width: 100%;
 }
+.comment-form textarea, .comment-form input {
+    width: 50%;
+    display: block;
+}
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: skyblue;
+    color: white;
     float: right;
-    font-size: 26pt;
+    font-size: 10pt;
     margin-right: 20px;
 }
 
@@ -48,4 +52,16 @@ h1, h2, h3, h4 {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+.btn-icon{
+    font-size:  30px;
+}
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+.footer{
+    margin-top: 30px;
+    height: 50px;
+    background: #72b4d3;
+    color:white;
 }

@@ -8,10 +8,19 @@
         <title>Travel Blog</title>
     </head>
     <body>
-        
         <div class="page-header col-md-12">
             <div class="header-title">
+                {% if user.is_authenticated %}
+                    <div class="header-buttons pull-right">
+                        <a href="{% url 'post_new' %}" class="btn btn-primary" title="Add Article"><span class="glyphicon glyphicon-plus btn-icon"></span></a>
+                        <a href="{% url 'post_draft_list' %}" class="btn btn-success" title="Drafts"><span class="glyphicon glyphicon-file btn-icon"></span></a>
+                        <a href="{% url 'logout' %}" class="btn btn-danger" title="Logout"><span class="glyphicon glyphicon-log-out btn-icon"></span></a>
+                    </div>
+                {% else %}
+                <a href="{% url 'login' %}" class="btn btn-primary pull-right" title="Login"><span class="glyphicon glyphicon-log-in btn-icon"></span></a>
+                {% endif %}
                 <h1><a href="/">Javier - Villaluz Travel Blog</a></h1>
+                
             </div>
         </div>
         <div class="content container">
@@ -22,5 +31,9 @@
                 </div>
             </div>
         </div>
+        <footer class="footer text-center" >
+            <br>
+            <p>All rights served 2019</p>
+        </footer>
     </body>
 </html>
